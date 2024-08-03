@@ -28,7 +28,7 @@ resource "aws_s3_bucket" "b1" {
 }
 
 resource "aws_instance" "vm1" {
-  count =1 
+  count =2 
   ami = "ami-025fe52e1f2dc5044"
   instance_type = "t2.nano"
   tags = {
