@@ -17,7 +17,7 @@ terraform {
   cloud {
     organization = "priar"
     workspaces {
-      name = "cli-w1"
+      name = "terraform-crash-course-1"
     }
   }
 }
