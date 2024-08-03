@@ -13,14 +13,6 @@ provider "aws" {
   region     = var.location
 }
 
-terraform {
-  cloud {
-    organization = "priar"
-    workspaces {
-      name = "terraform-crash-course-1"
-    }
-  }
-}
 
 resource "aws_s3_bucket" "b1" {
   bucket = "tc-bucket1-030824"
@@ -36,3 +28,14 @@ resource "aws_instance" "vm1" {
   }
 }
   
+terraform {
+  cloud {
+    organization = "priar"
+    ## Required for Terraform Enterprise; Defaults to app.terraform.io for Terraform Cloud
+    hostname = "app.terraform.io"
+
+    workspaces {
+      tags = ["samosa"]
+    }
+  }
+}
