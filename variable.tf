@@ -1,0 +1,10 @@
+# variable "sid" { type = string }
+# variable "cid" { type = string }
+# variable "cs" { type = string }
+# variable "tid" { type = string }
+variable "vnetname" { type = string }
+variable "addressspace" { type = list(string) }
+variable "rgname" { type = string }
+variable "location" { type = string }
+variable "subnetname" { type = string }
+variable "subnetprefix" { type = list(string) }
